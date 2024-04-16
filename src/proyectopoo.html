@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Juego</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Juego de Batalla de Unidades</h1>
+
+      <div class="players">
+        <!-- Jugador 1 -->
+        <div class="player" id="player1">
+          <h2>Jugador 1</h2>
+          <!-- Información del dinero del jugador 1 -->
+          <p>Dinero: $<span id="player1-money">50</span></p>
+
+          <!-- Botón para comprar unidades del jugador 1 -->
+          <button id="player1-buyBtn" onclick="showUnitInfo('player1')">
+            Comprar Unidades
+          </button>
+
+          <!-- Contenedor de unidades del jugador 1 -->
+          <div id="player1-units" class="units-container"></div>
+
+          <!-- Info de unidades del jugador 2 -->
+          <div id="player1-unit-info"></div>
+        </div>
+
+        <!-- Jugador 2 -->
+        <div class="player" id="player2">
+          <h2>Jugador 2</h2>
+          <!-- Información del dinero del jugador 2 -->
+          <p>Dinero: $<span id="player2-money">50</span></p>
+
+          <!-- Botón para comprar unidades del jugador 2 -->
+          <button id="player2-buyBtn" onclick="showUnitInfo('player2')">
+            Comprar Unidades
+          </button>
+
+          <!-- Contenedor de unidades del jugador 2 -->
+          <div id="player2-units" class="units-container"></div>
+
+          <!-- Info de unidades del jugador 2 -->
+          <div id="player2-unit-info"></div>
+        </div>
+      </div>
+
+      <!-- Contenedor para mostrar información de las unidades -->
+      <div id="unit-info" class="unit-info"></div>
+
+      <button id="startCombatBtn" onclick="startCombat()">
+        ¡Iniciar Combate!
+      </button>
+
+      <button onclick="reset()" class="reset">Reset</button>
+
+      <!-- Contenedor para mostrar información de la partida actual -->
+      <div id="round-info" class="round-info"></div>
+
+      <!-- Contenedor para mostrar porcentajes -->
+      <div id="porcentaje"></div>
+
+      <!-- contenedor para la cuadrícula de combate -->
+      <div id="combat-grid" class="combat-grid"></div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
